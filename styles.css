@@ -137,6 +137,20 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     /* Header */
+         .form-row {
+          grid-template-columns: 1fr;
+      }
+      
+      .contact-form,
+      .form-group,
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
+      }
+
     .header-top {
         font-size: 12px;
     }
@@ -251,6 +265,12 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     /* Contact */
+   /*here*/
+      .contact-container {
+       width: 100%;
+       max-width: 100%;
+   }
+
     .contact-container {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -396,6 +416,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header-main {
+    position: relative;
 }
 
 /* Logo */
