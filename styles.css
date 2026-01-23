@@ -19,15 +19,11 @@
 *::before,
 *::after {
     box-sizing: border-box;
-}
-
-* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-html, body {
+html {
     overflow-x: hidden;
 }
 
@@ -36,316 +32,22 @@ body {
     line-height: 1.6;
     color: var(--dark-gray);
     background: var(--white);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
-}
-
-.footer-section p,
-.footer-section a {
-    color: var(--white);
-    display: block;
-    margin-bottom: 10px;
-    opacity: 0.9;
-    line-height: 1.6;
-}
-
-.footer-section a:hover {
-    color: var(--texas-red);
-    opacity: 1;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.footer-logo .logo-placeholder {
-    width: 50px;
-    height: 50px;
-    font-size: 16px;
-}
-
-.footer-logo h3 {
-    font-size: 18px;
-    color: var(--white);
-    margin: 0 0 5px 0;
-}
-
-.footer-logo p {
-    font-size: 11px;
-    margin: 0;
-    opacity: 0.7;
-}
-
-.footer-tagline {
-    font-size: 14px;
-    font-style: italic;
-    opacity: 0.8;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    opacity: 0.7;
-    font-size: 14px;
-}
-
-/* ========================================
-   STICKY CALL BUTTON (MOBILE)
-   ======================================== */
-
-.sticky-call {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--texas-red);
-    color: var(--white);
-    padding: 15px 25px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 16px;
-    box-shadow: 0 4px 20px rgba(191, 10, 48, 0.4);
-    z-index: 999;
-    animation: pulse 2s infinite;
-}
-
-.sticky-call:hover {
-    background: #9A0826;
-    color: var(--white);
-    transform: scale(1.05);
-}
-
-@keyframes pulse {
-    0%, 100% { 
-        transform: scale(1); 
-    }
-    50% { 
-        transform: scale(1.05); 
-    }
-}
-
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
-
-@media (max-width: 768px) {
-    /* Header */
-         .form-row {
-          grid-template-columns: 1fr;
-      }
-      
-      .contact-form,
-      .form-group,
-      .form-group input,
-      .form-group textarea,
-      .form-group select {
-          width: 100%;
-          max-width: 100%;
-          box-sizing: border-box;
-      }
-
-    .header-top {
-        font-size: 12px;
-    }
-    
-    .header-location {
-        display: none;
-    }
-
-    .logo-text h1 {
-        font-size: 18px;
-    }
-
-    .logo-text p {
-        font-size: 10px;
-    }
-
-    .logo-placeholder {
-        width: 50px;
-        height: 50px;
-        font-size: 16px;
-    }
-
-    #main-nav {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: flex;
-    }
-
-    /* Hero */
-    .hero {
-        padding: 50px 20px;
-    }
-
-    .hero h2 {
-        font-size: 32px;
-    }
-
-    .hero .tagline {
-        font-size: 18px;
-    }
-
-    .hero .subtext {
-        font-size: 16px;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-    }
-
-    .cta-button {
-        width: 100%;
-        justify-content: center;
-    }
-
-    /* Sections */
-    .section {
-        padding: 50px 20px;
-    }
-
-    .section-title {
-        font-size: 28px;
-    }
-
-    .section-subtitle {
-        font-size: 16px;
-    }
-
-    /* Value Props */
-    .value-props {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    /* Services */
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-detail-content {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .service-detail-icon {
-        text-align: center;
-        font-size: 48px;
-    }
-
-    /* Gallery */
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Projects */
-    .featured-projects {
-        grid-template-columns: 1fr;
-    }
-
-    .industries-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Testimonials */
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .review-stats {
-        gap: 30px;
-    }
-
-    /* Contact */
-   /*here*/
-      .contact-container {
-       width: 100%;
-       max-width: 100%;
-   }
-
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    /* Footer */
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    /* Show Sticky Call Button */
-    .sticky-call {
-        display: inline-flex;
-    }
-
-    /* Page Header */
-    .page-header {
-        padding: 40px 20px;
-    }
-
-    .page-header h1 {
-        font-size: 32px;
-    }
-
-    .page-header p {
-        font-size: 16px;
-    }
-
-    /* Process Steps */
-    .process-steps {
-        grid-template-columns: 1fr;
-    }
-
-    /* Trust Signals */
-    .trust-signals {
-        gap: 30px;
-    }
-
-    .trust-number {
-        font-size: 36px;
-    }
-
-    .trust-label {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h2 {
-        font-size: 26px;
-    }
-
-    .section-title {
-        font-size: 24px;
-    }
-
-    .cta-button {
-        font-size: 16px;
-        padding: 15px 30px;
-    }
-
-    .contact-detail-value {
-        font-size: 22px;
-    }
+    line-height: 1.2;
+    color: var(--texas-blue);
 }
 
 h1 { font-size: 2.5rem; }
@@ -367,7 +69,6 @@ a:hover {
     color: var(--texas-red);
 }
 
-/* Utility Classes */
 .text-center {
     text-align: center;
 }
@@ -383,6 +84,7 @@ header {
     background: var(--white);
     border-bottom: 3px solid var(--texas-red);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .header-top {
@@ -412,9 +114,9 @@ header {
 }
 
 .header-main {
-    position: relative;
+    padding: 15px 0;
     width: 100%;
-    overflow-x: hidden;
+    position: relative;
 }
 
 .header-content {
@@ -423,19 +125,11 @@ header {
     align-items: center;
 }
 
-.header-main {
-    position: relative;
-}
-
 /* Logo */
 .logo {
     display: flex;
     align-items: center;
     gap: 15px;
-}
-
-.logo-image {
-    display: flex;
 }
 
 .logo-placeholder {
@@ -450,6 +144,7 @@ header {
     color: var(--white);
     font-size: 18px;
     border-radius: 3px;
+    flex-shrink: 0;
 }
 
 .logo-text h1 {
@@ -529,21 +224,16 @@ header {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Mobile Menu */
+/* Mobile Menu - FIXED */
 .mobile-menu {
     display: none;
     background: var(--texas-blue);
-    padding: 16px;
-
+    padding: 0;
     position: absolute;
     top: 100%;
     left: 0;
-    right: 0;
-
     width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
-    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-menu.active {
@@ -553,7 +243,7 @@ header {
 .mobile-menu a {
     display: block;
     color: var(--white);
-    padding: 15px;
+    padding: 15px 20px;
     font-weight: 600;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -940,6 +630,14 @@ header {
    PROJECTS / GALLERY
    ======================================== */
 
+.gallery-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+    color: var(--medium-gray);
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -949,28 +647,38 @@ header {
 
 .gallery-item {
     position: relative;
-    height: 250px; /* fixed height for uniform grid */
+    height: 250px;
     overflow: hidden;
     border: 3px solid var(--white);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     transition: transform 0.3s ease;
-    display: flex;             /* center the image */
-    align-items: center;       /* vertically center */
-    justify-content: center;   /* horizontally center */
-    background: var(--light-gray); /* optional placeholder background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-gray);
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain;  /* ensures the entire image is visible */
+    object-fit: cover;
     display: block;
 }
 
 .gallery-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--light-gray) 0%, #d0d0d0 100%);
+    font-size: 64px;
 }
 
 .gallery-label {
@@ -1008,14 +716,14 @@ header {
 }
 
 .project-image {
-    height: auto;
-    overflow: visible;
+    height: 200px;
+    overflow: hidden;
 }
 
 .project-image img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
 }
 
 .project-placeholder {
@@ -1167,7 +875,7 @@ header {
 }
 
 /* ========================================
-   CONTACT PAGE
+   CONTACT PAGE - FIXED FOR MOBILE
    ======================================== */
 
 .page-header {
@@ -1212,6 +920,8 @@ header {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     margin-top: 40px;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* Contact Info */
@@ -1221,6 +931,7 @@ header {
     padding: 40px;
     border-radius: 10px;
     height: fit-content;
+    width: 100%;
 }
 
 .contact-info h3 {
@@ -1258,6 +969,7 @@ header {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 10px;
+    word-wrap: break-word;
 }
 
 .contact-detail-value a {
@@ -1287,7 +999,12 @@ header {
     margin-bottom: 15px;
 }
 
-/* Contact Form */
+/* Contact Form - FIXED */
+.contact-form-wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+
 .contact-form-wrapper h3 {
     font-size: 28px;
     margin-bottom: 10px;
@@ -1302,6 +1019,8 @@ header {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .form-row {
@@ -1313,6 +1032,8 @@ header {
 .form-group {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 100%;
 }
 
 .form-group label {
@@ -1331,6 +1052,9 @@ header {
     font-size: 16px;
     font-family: inherit;
     transition: border-color 0.3s ease;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -1355,6 +1079,7 @@ header {
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
 .submit-btn:hover {
@@ -1423,122 +1148,327 @@ header {
 }
 
 /* ========================================
-   CTA SECTION
-   ======================================== */
-
+CTA SECTION
+======================================== */
 .cta-section {
-    background: var(--texas-blue);
-    color: var(--white);
-    padding: 70px 20px;
-    text-align: center;
+background: var(--texas-blue);
+color: var(--white);
+padding: 70px 20px;
+text-align: center;
 }
-
 .cta-content h2 {
-    font-size: 38px;
-    font-weight: 900;
-    color: var(--white);
-    margin-bottom: 15px;
+font-size: 38px;
+font-weight: 900;
+color: var(--white);
+margin-bottom: 15px;
 }
-
 .cta-content p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    opacity: 0.95;
+font-size: 20px;
+margin-bottom: 30px;
+opacity: 0.95;
 }
-
 .cta-content .cta-button {
-    margin: 0 10px 10px;
+margin: 0 10px 10px;
 }
-
 /* ========================================
-   FOOTER
-   ======================================== */
-
+FOOTER
+======================================== */
 footer {
-    background: var(--dark-gray);
-    color: var(--white);
-    padding: 50px 20px 20px;
+background: var(--dark-gray);
+color: var(--white);
+padding: 50px 20px 20px;
 }
-
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 30px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 40px;
+margin-bottom: 30px;
 }
-
 .footer-section h3,
 .footer-section h4 {
-    color: var(--texas-red);
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: 700;
+color: var(--texas-red);
+margin-bottom: 20px;
+font-size: 18px;
+font-weight: 700;
 }
-
 .footer-section p,
 .footer-section a {
-    color: var(--white);
-    display: block;
-    margin-bottom: 10px;
-    opacity: 0.9;
-    line-height: 1.6;
+color: var(--white);
+display: block;
+margin-bottom: 10px;
+opacity: 0.9;
+line-height: 1.6;
 }
-
 .footer-section a:hover {
-    color: var(--texas-red);
-    opacity: 1;
+color: var(--texas-red);
+opacity: 1;
 }
-
 .footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+display: flex;
+align-items: center;
+gap: 15px;
+margin-bottom: 20px;
+}
+.footer-logo .logo-placeholder {
+width: 50px;
+height: 50px;
+font-size: 16px;
+}
+.footer-logo h3 {
+font-size: 18px;
+color: var(--white);
+margin: 0 0 5px 0;
+}
+.footer-logo p {
+font-size: 11px;
+margin: 0;
+opacity: 0.7;
+}
+.footer-tagline {
+font-size: 14px;
+font-style: italic;
+opacity: 0.8;
+}
+.footer-bottom {
+text-align: center;
+padding-top: 30px;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+opacity: 0.7;
+font-size: 14px;
+}
+/* ========================================
+STICKY CALL BUTTON (MOBILE)
+======================================== */
+.sticky-call {
+display: none;
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: var(--texas-red);
+color: var(--white);
+padding: 15px 25px;
+border-radius: 50px;
+font-weight: 700;
+font-size: 16px;
+box-shadow: 0 4px 20px rgba(191, 10, 48, 0.4);
+z-index: 999;
+animation: pulse 2s infinite;
+}
+.sticky-call:hover {
+background: #9A0826;
+color: var(--white);
+transform: scale(1.05);
+}
+@keyframes pulse {
+0%, 100% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.05);
+}
+}
+/* ========================================
+RESPONSIVE DESIGN
+======================================== */
+@media (max-width: 768px) {
+/* Header */
+.header-top {
+font-size: 12px;
+}
+.header-location {
+    display: none;
 }
 
-.footer-logo .logo-placeholder {
+.logo-text h1 {
+    font-size: 18px;
+}
+
+.logo-text p {
+    font-size: 10px;
+}
+
+.logo-placeholder {
     width: 50px;
     height: 50px;
     font-size: 16px;
+}
+
+#main-nav {
+    display: none;
+}
+
+.mobile-menu-btn {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--texas-blue);
-    color: var(--white);
-    border-radius: 3px;
 }
 
-.footer-logo h3 {
+/* Hero */
+.hero {
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 32px;
+}
+
+.hero .tagline {
     font-size: 18px;
-    color: var(--white);
-    margin: 0 0 5px 0;
 }
 
-.footer-logo p {
-    font-size: 11px;
-    margin: 0;
-    opacity: 0.7;
+.hero .subtext {
+    font-size: 16px;
 }
 
-.footer-tagline {
-    font-size: 14px;
-    font-style: italic;
-    opacity: 0.8;
+.cta-buttons {
+    flex-direction: column;
 }
 
-.footer-bottom {
+.cta-button {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Sections */
+.section {
+    padding: 50px 20px;
+}
+
+.section-title {
+    font-size: 28px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+}
+
+/* Value Props */
+.value-props {
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+/* Services */
+.services-grid {
+    grid-template-columns: 1fr;
+}
+
+.service-detail-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.service-detail-icon {
     text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    opacity: 0.7;
-    font-size: 14px;
+    font-size: 48px;
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding-left: 16px;
-        padding-right: 16px;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
+/* Gallery */
+.gallery-grid {
+    grid-template-columns: 1fr;
+}
+
+/* Projects */
+.featured-projects {
+    grid-template-columns: 1fr;
+}
+
+.industries-grid {
+    grid-template-columns: 1fr;
+}
+
+/* Testimonials */
+.testimonials-grid {
+    grid-template-columns: 1fr;
+}
+
+.review-stats {
+    gap: 30px;
+}
+
+/* Contact - FIXED */
+.contact-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.contact-info,
+.contact-form-wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+
+.contact-info {
+    padding: 30px 20px;
+}
+
+.form-row {
+    grid-template-columns: 1fr;
+}
+
+.contact-detail-value {
+    font-size: 22px;
+}
+
+/* Footer */
+.footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+/* Show Sticky Call Button */
+.sticky-call {
+    display: inline-flex;
+}
+
+/* Page Header */
+.page-header {
+    padding: 40px 20px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+}
+
+.page-header p {
+    font-size: 16px;
+}
+
+/* Process Steps */
+.process-steps {
+    grid-template-columns: 1fr;
+}
+
+/* Trust Signals */
+.trust-signals {
+    gap: 30px;
+}
+
+.trust-number {
+    font-size: 36px;
+}
+
+.trust-label {
+    font-size: 14px;
+}
+}
+@media (max-width: 480px) {
+.hero h2 {
+font-size: 26px;
+}
+.section-title {
+    font-size: 24px;
+}
+
+.cta-button {
+    font-size: 16px;
+    padding: 15px 30px;
+}
+
+.contact-detail-value {
+    font-size: 20px;
+}
+
+.contact-info {
+    padding: 25px 15px;
 }
